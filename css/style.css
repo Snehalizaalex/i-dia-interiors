@@ -814,7 +814,6 @@ footer {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   width: max-content !important;
-  animation: scrollSlider 30s linear infinite;
   gap: 30px;
 }
 
@@ -844,7 +843,41 @@ footer {
 
   100% {
     transform: translateX(-50%);
-    /* Half for seamless loop */
+  }
+}
+
+@media (min-width: 769px) {
+  .slider-track {
+    animation: scrollSlider 30s linear infinite;
+  }
+}
+
+/* Fix mobile slider speed/responsiveness */
+@media (max-width: 768px) {
+  .slider-item {
+    width: 250px !important;
+    min-width: 250px !important;
+  }
+
+  .slider-item img {
+    height: 300px !important;
+  }
+
+  /* Reset animation cleanly for mobile */
+  .slider-track {
+    animation: scrollSliderMobile 20s linear infinite !important;
+    width: max-content !important;
+    display: flex !important;
+  }
+
+  @keyframes scrollSliderMobile {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 
