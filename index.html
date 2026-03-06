@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i dia Interiors | Crafting Beautiful Spaces</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description"
+    content="i dia Interiors transforms spaces into timeless luxury experiences. High-end residential and commercial interior design studio.">
+  <style>
+    /* Continuous Slider Animation */
+    @keyframes scrollSlider {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .slider-container {
+      overflow: hidden;
+      padding: 60px 0;
+      background: #0E0E0E;
+      position: relative;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .slider-track {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      width: max-content !important;
+      animation: scrollSlider 30s linear infinite !important;
+      gap: 30px;
+    }
+
+    .slider-track:hover {
+      animation-play-state: paused !important;
+    }
+
+    .slider-item {
+      width: 500px !important;
+      min-width: 500px !important;
+      flex-shrink: 0 !important;
+      position: relative;
+    }
+
+    .slider-item img {
+      width: 100% !important;
+      height: 600px !important;
+      object-fit: cover !important;
+      border-radius: 4px;
+      transition: transform 0.5s ease;
+    }
+
+    /* Trusted Partners Slider Animation */
+    @keyframes scrollPartner {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-33.3333%);
+        /* 1/3 since we have 3 sets of 4 logos */
+      }
+    }
+
+    .partner-slider-container {
+      overflow: hidden;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      padding: 30px 0;
+      background: rgba(14, 14, 14, 0.4);
+      /* subtle background for logos to stand out */
+    }
+
+    .partner-slider-track {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      width: max-content !important;
+      animation: scrollPartner 20s linear infinite !important;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .partner-slider-track:hover {
+      animation-play-state: paused !important;
+    }
+
+    .partner-item {
+      width: 180px !important;
+      min-width: 180px !important;
+      flex-shrink: 0 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .partner-item img {
+      max-width: 100%;
+      max-height: 80px;
+      /* makes it little small */
+      object-fit: contain;
+      filter: grayscale(100%) brightness(1.2);
+      /* elegant look */
+      transition: filter 0.3s ease;
+    }
+
+    .partner-item img:hover {
+      filter: grayscale(0%) brightness(1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky Navigation -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" style="display: flex; align-items: center;">
+        <img src="idia logo.png" alt="i dia." style="height: 48px; width: auto; object-fit: contain;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 30px;">
+        <nav>
+          <ul>
+            <li><a href="#home" class="nav-link active">Home Page</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#works" class="nav-link">My Work</a></li>
+            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
+        <button id="quoteBtn" class="btn btn-primary"
+          style="padding: 10px 24px; font-size: 0.85rem; border-radius: 4px;">Get Free Quote</button>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <div id="home" class="spa-page active">
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Crafting Beautiful Spaces</h1>
+        <p>Transforming interiors into timeless luxury experiences tailored for you.</p>
+        <div class="btn-group">
+          <a href="#works" class="btn btn-primary">Explore Our Works</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div id="about" class="spa-page">
+    <section class="section" style="padding-top: 150px;">
+      <div class="container fade-in-section text-center">
+        <h1 class="section-title">About I DIA Interiors</h1>
+        <p class="section-subtitle">We don’t just design interiors — we craft experiences.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container grid-2 fade-in-section">
+        <div>
+          <img src="about us.jpg" alt="About I DIA Interiors"
+            style="width: 100%; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        </div>
+        <div>
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2;">Creating a Lifestyle</h2>
+          <p class="mb-2">At I DIA Interiors, we believe that great design is not just about beauty — it’s about
+            creating a lifestyle.</p>
+          <p class="mb-2">Based in Kerala, we specialize in premium modular kitchens, bespoke wardrobes, and
+            complete turnkey interior solutions. Every project we undertake reflects our commitment to quality
+            craftsmanship, refined detailing, and timeless elegance.</p>
+          <p class="mb-4">Our approach combines modern innovation with practical functionality, ensuring that
+            every space we design is visually stunning and comfortably livable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-color-alt);">
+      <div class="container fade-in-section text-center">
+        <h2 class="section-title">Our Expertise</h2>
+        <p class="section-subtitle" style="margin-bottom: 40px;">Each project is executed with premium
+          materials,
+          precision finishes, and meticulous attention to detail.</p>
+        <div class="grid-3" style="text-align: left; margin-bottom: 40px; margin-top: 0; gap: 30px;">
+          <div style="padding: 20px; border-left: 2px solid var(--text-primary); background: rgba(255,255,255,0.02);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0;">Luxury Modular Kitchens</h3>
+          </div>
+          <div style="padding: 20px; border-left: 2px solid var(--text-primary); background: rgba(255,255,255,0.02);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0;">Bespoke Wardrobe Designs</h3>
+          </div>
+          <div style="padding: 20px; border-left: 2px solid var(--text-primary); background: rgba(255,255,255,0.02);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0;">Elegant Living Room Interiors</h3>
+          </div>
+          <div style="padding: 20px; border-left: 2px solid var(--text-primary); background: rgba(255,255,255,0.02);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0;">Designer TV Units</h3>
+          </div>
+          <div style="padding: 20px; border-left: 2px solid var(--text-primary); background: rgba(255,255,255,0.02);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0;">Custom Furniture Solutions</h3>
+          </div>
+          <div style="padding: 20px; border-left: 2px solid var(--text-primary); background: rgba(255,255,255,0.02);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0;">Complete Turnkey Home Interiors</h3>
+          </div>
+        </div>
+        <p
+          style="text-align: center; max-width: 800px; margin: 0 auto 20px; color: var(--textLight); font-size: 1.1rem;">
+          Explore our curated portfolio of sophisticated interiors designed to elevate everyday living.</p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #aaa;">From contemporary kitchens
+          to
+          luxurious bedroom spaces, every project showcases our dedication to excellence and refined
+          craftsmanship.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container fade-in-section">
+        <h2 class="section-title text-center">Why Choose I DIA Interiors?</h2>
+        <div class="grid-3" style="margin-top: 50px;">
+          <div class="text-center"
+            style="padding: 30px; background: var(--bg-color-alt); border-radius: 4px; border-bottom: 2px solid var(--text-primary); transition: transform 0.3s; cursor: default;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size: 2rem; color: var(--text-primary); margin-bottom: 15px;">✔</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0;">Premium Quality Materials</h4>
+          </div>
+          <div class="text-center"
+            style="padding: 30px; background: var(--bg-color-alt); border-radius: 4px; border-bottom: 2px solid var(--text-primary); transition: transform 0.3s; cursor: default;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size: 2rem; color: var(--text-primary); margin-bottom: 15px;">✔</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0;">Transparent Pricing</h4>
+          </div>
+          <div class="text-center"
+            style="padding: 30px; background: var(--bg-color-alt); border-radius: 4px; border-bottom: 2px solid var(--text-primary); transition: transform 0.3s; cursor: default;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size: 2rem; color: var(--text-primary); margin-bottom: 15px;">✔</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0;">On-Time Project Delivery</h4>
+          </div>
+          <div class="text-center"
+            style="padding: 30px; background: var(--bg-color-alt); border-radius: 4px; border-bottom: 2px solid var(--text-primary); transition: transform 0.3s; cursor: default;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size: 2rem; color: var(--text-primary); margin-bottom: 15px;">✔</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0;">Personalized Design Approach</h4>
+          </div>
+          <div class="text-center"
+            style="padding: 30px; background: var(--bg-color-alt); border-radius: 4px; border-bottom: 2px solid var(--text-primary); transition: transform 0.3s; cursor: default;"
+            onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="font-size: 2rem; color: var(--text-primary); margin-bottom: 15px;">✔</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 0;">Dedicated Project Support</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="services" class="spa-page">
+    <section class="section" style="padding-top: 150px; padding-bottom: 50px;">
+      <div class="container fade-in-section text-center">
+        <h1 class="section-title">Our Expertise</h1>
+        <p class="section-subtitle">We offer comprehensive interior architecture and design services, delivering
+          refined spaces globally.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container fade-in-section">
+        <div class="grid-2">
+          <!-- Service 1 -->
+          <div class="service-card" style="padding: 0;">
+            <img src="service 1.jpg" alt="Residential Interior Design" class="pop-up"
+              style="width: 100%; height: 350px; object-fit: cover; display: block;">
+            <div style="padding: 40px;">
+              <div style="margin-bottom: 20px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <h3>Residential Interior Design</h3>
+              <p>We craft luxurious, calming living spaces that reflect the unique lifestyle of our clients.
+                From
+                concept to implementation.</p>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card" style="padding: 0;">
+            <img src="service2.jpg" alt="Commercial Interior Design" class="pop-up"
+              style="width: 100%; height: 350px; object-fit: cover; display: block;">
+            <div style="padding: 40px;">
+              <div style="margin-bottom: 20px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <h3>Commercial Interior Design</h3>
+              <p>Designing sophisticated workspaces, boutiques, and hospitality venues that elevate brand
+                identity
+                and maximize function.</p>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card" style="padding: 0;">
+            <img src="service3.jpeg" alt="Space Planning" class="pop-up"
+              style="width: 100%; height: 350px; object-fit: cover; display: block;">
+            <div style="padding: 40px;">
+              <div style="margin-bottom: 20px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3>Space Planning</h3>
+              <p>Optimizing layouts to ensure seamless flow and spatial efficiency, creating harmony between
+                the
+                architectural shell and interiors.</p>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card" style="padding: 0;">
+            <img src="service4.jpeg" alt="Renovation & Remodeling" class="pop-up"
+              style="width: 100%; height: 350px; object-fit: cover; display: block;">
+            <div style="padding: 40px;">
+              <div style="margin-bottom: 20px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3>Renovation & Remodeling</h3>
+              <p>Transforming outdated structures into modern masterworks, meticulously blending history with
+                contemporary luxury aesthetics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="works" class="spa-page">
+    <section class="section" style="padding-top: 150px; padding-bottom: 50px;">
+      <div class="container fade-in-section text-center">
+        <h1 class="section-title">Portfolio</h1>
+        <p class="section-subtitle">A curated collection of our finest interior design projects, showcasing our
+          commitment to elegant spaces.</p>
+
+        <!-- Category Filter Removed -->
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0; overflow: hidden;">
+      <div class="slider-container">
+        <div class="slider-track">
+          <!-- Slide 1 -->
+          <div class="project-card slider-item">
+            <img src="interior_4k_upscaled.png" alt="Luxury Living">
+            <div class="project-overlay">
+              <h4>Modern Living Room</h4>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-card slider-item">
+            <img src="luxury_interior_4k_upscaled.png" alt="Elegant Suite">
+            <div class="project-overlay">
+              <h4>Elegant Bedroom</h4>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-card slider-item">
+            <img src="kitchen_interior_4k_upscaled.png" alt="Modular Kitchen">
+            <div class="project-overlay">
+              <h4>Premium Modular Kitchen</h4>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-card slider-item">
+            <img src="wash.jpeg" alt="Washroom Design">
+            <div class="project-overlay">
+              <h4>Luxury Washroom</h4>
+            </div>
+          </div>
+          <!-- Duplicates for seamless loop -->
+          <div class="project-card slider-item">
+            <img src="interior_4k_upscaled.png" alt="Luxury Living">
+            <div class="project-overlay">
+              <h4>Modern Living Room</h4>
+            </div>
+          </div>
+          <div class="project-card slider-item">
+            <img src="luxury_interior_4k_upscaled.png" alt="Elegant Suite">
+            <div class="project-overlay">
+              <h4>Elegant Bedroom</h4>
+            </div>
+          </div>
+          <div class="project-card slider-item">
+            <img src="kitchen_interior_4k_upscaled.png" alt="Modular Kitchen">
+            <div class="project-overlay">
+              <h4>Premium Modular Kitchen</h4>
+            </div>
+          </div>
+          <div class="project-card slider-item">
+            <img src="wash.jpeg" alt="Washroom Design">
+            <div class="project-overlay">
+              <h4>Luxury Washroom</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="contact" class="spa-page"
+    style="background: linear-gradient(rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.95)), url('contact us pic.png') center/cover no-repeat fixed; min-height: 100vh;">
+    <section class="section" style="padding-top: 150px;">
+      <div class="container fade-in-section">
+        <div class="grid-2">
+          <div>
+            <h1 class="section-title" style="text-align: left;">Get in Touch</h1>
+            <p class="mb-4">We would love to hear about your upcoming project. Connect with our team of lead
+              designers and let us bring your vision to life.</p>
+
+            <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 25px;">
+              <!-- Phone -->
+              <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <div>
+                  <p style="margin-bottom: 5px; font-weight: 500;">Phone</p>
+                  <a href="tel:+919995442552" style="color: #aaa; text-decoration: none; transition: color 0.3s;"
+                    onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='#aaa'">+91
+                    9995442552</a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                  </path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <div>
+                  <p style="margin-bottom: 5px; font-weight: 500;">Email</p>
+                  <a href="mailto:idiainterior@gmail.com"
+                    style="color: #aaa; text-decoration: none; transition: color 0.3s;"
+                    onmouseover="this.style.color='var(--text-primary)'"
+                    onmouseout="this.style.color='#aaa'">idiainterior@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Social Media -->
+              <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-primary)"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <div>
+                  <p style="margin-bottom: 5px; font-weight: 500;">Connect With Us</p>
+                  <div style="display: flex; gap: 15px;">
+                    <a href="https://www.instagram.com/i_dia_interiors/" target="_blank"
+                      style="color: #aaa; text-decoration: none; transition: color 0.3s;"
+                      onmouseover="this.style.color='var(--text-primary)'"
+                      onmouseout="this.style.color='#aaa'">Instagram</a>
+                    <a href="https://www.facebook.com/share/1B4NBnShhN/" target="_blank"
+                      style="color: #aaa; text-decoration: none; transition: color 0.3s;"
+                      onmouseover="this.style.color='var(--text-primary)'"
+                      onmouseout="this.style.color='#aaa'">Facebook</a>
+                    <a href="https://youtube.com/@i_dia_interiors?si=X4MVH7BbsuT0u-BM" target="_blank"
+                      style="color: #aaa; text-decoration: none; transition: color 0.3s;"
+                      onmouseover="this.style.color='var(--text-primary)'"
+                      onmouseout="this.style.color='#aaa'">YouTube</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" class="form-control" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline" style="width: 100%;">Submit Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-0" style="padding-top: 40px !important;">
+      <div class="container fade-in-section">
+        <iframe src="https://maps.google.com/maps?q=8.4642,76.9906&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%"
+          height="450"
+          style="border: 1px solid #333; border-radius: 4px; filter: grayscale(100%) invert(90%) hue-rotate(180deg);"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="section" style="padding-top: 60px; padding-bottom: 80px; overflow: hidden;">
+      <div class="container fade-in-section text-center">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Our Trusted Partners</h2>
+        <p style="font-size: 0.9rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px;">
+          Winning collaborations that produce winning design
+        </p>
+      </div>
+      <div class="partner-slider-container">
+        <div class="partner-slider-track">
+          <!-- Set 1 -->
+          <div class="partner-item"><img src="samsung1.jpeg" alt="Samsung"></div>
+          <div class="partner-item"><img src="seimans1.jpeg" alt="Siemens"></div>
+          <div class="partner-item"><img src="greenlam.jpeg" alt="Greenlam"></div>
+          <div class="partner-item"><img src="bosch1.jpeg" alt="Bosch"></div>
+          <!-- Set 2 (for seamless loop) -->
+          <div class="partner-item"><img src="samsung1.jpeg" alt="Samsung"></div>
+          <div class="partner-item"><img src="seimans1.jpeg" alt="Siemens"></div>
+          <div class="partner-item"><img src="greenlam.jpeg" alt="Greenlam"></div>
+          <div class="partner-item"><img src="bosch1.jpeg" alt="Bosch"></div>
+          <!-- Set 3 (for seamless loop) -->
+          <div class="partner-item"><img src="samsung1.jpeg" alt="Samsung"></div>
+          <div class="partner-item"><img src="seimans1.jpeg" alt="Siemens"></div>
+          <div class="partner-item"><img src="greenlam.jpeg" alt="Greenlam"></div>
+          <div class="partner-item"><img src="bosch1.jpeg" alt="Bosch"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo">IDIA.</a>
+        <p style="color: #666; max-width: 400px; margin: 0 auto;">Luxury interior design studio dedicated to
+          crafting
+          timeless, deeply personal spaces.</p>
+        <div class="social-links">
+          <a href="#">IG</a>
+          <a href="#">FB</a>
+          <a href="#">PT</a>
+        </div>
+      </div>
+      <p class="mt-4" style="color: #444; font-size: 0.85rem;">&copy; 2026 i dia Interiors. All Rights
+        Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Quote Modal -->
+  <div id="quoteModal" class="modal" style="display: none !important;">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="font-family: var(--font-hero); color: var(--text-primary); margin-bottom: 20px; font-size: 2.5rem;">
+        Talk to a Designer</h2>
+      <form id="quoteForm"
+        onsubmit="event.preventDefault(); alert('Consultation booked successfully!'); document.getElementById('quoteModal').style.display='none';">
+        <div class="form-group" style="text-align: left;">
+          <label for="modal-name">Name</label>
+          <input type="text" id="modal-name" class="form-control" required>
+        </div>
+        <div class="form-group" style="text-align: left;">
+          <label for="modal-email">Email ID</label>
+          <input type="email" id="modal-email" class="form-control" required>
+        </div>
+        <div class="form-group" style="text-align: left;">
+          <label for="modal-phone">Phone Number</label>
+          <input type="tel" id="modal-phone" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-outline" style="width: 100%; margin-top: 10px;">Book Online
+          Consultation</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
