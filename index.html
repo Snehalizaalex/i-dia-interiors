@@ -43,15 +43,15 @@
     }
 
     .slider-item {
-      width: 500px !important;
-      min-width: 500px !important;
+      width: 400px !important;
+      min-width: 400px !important;
       flex-shrink: 0 !important;
       position: relative;
     }
 
     .slider-item img {
       width: 100% !important;
-      height: 600px !important;
+      height: 480px !important;
       object-fit: cover !important;
       border-radius: 4px;
       transition: transform 0.5s ease;
@@ -114,6 +114,47 @@
     .partner-item img:hover {
       filter: grayscale(0%) brightness(1);
     }
+
+    /* Typing Animation */
+    .typing-container {
+      display: inline-block;
+      position: relative;
+      color: transparent !important;
+    }
+
+    .typing-container::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: var(--text-primary);
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 2.5s steps(30, end) forwards;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Mobile handling for long typing animated headlines */
+    @media (max-width: 768px) {
+      .typing-container {
+        color: var(--text-primary) !important;
+        white-space: normal;
+        word-wrap: break-word;
+      }
+
+      .typing-container::before {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -123,20 +164,25 @@
   <header id="main-header">
     <div class="container nav-container">
       <a href="#home" class="logo" style="display: flex; align-items: center;">
-        <img src="idia logo.png" alt="i dia." style="height: 48px; width: auto; object-fit: contain;">
+        <img src="logoe.jpeg" alt="i dia." style="height: 48px; width: auto; object-fit: contain;">
       </a>
       <div style="display: flex; align-items: center; gap: 30px;">
         <nav>
-          <ul>
+          <ul id="nav-menu">
             <li><a href="#home" class="nav-link active">Home Page</a></li>
             <li><a href="#about" class="nav-link">About Us</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#works" class="nav-link">My Work</a></li>
+            <li><a href="#works" class="nav-link">Our Work</a></li>
             <li><a href="#contact" class="nav-link">Contact Us</a></li>
           </ul>
         </nav>
         <button id="quoteBtn" class="btn btn-primary"
           style="padding: 10px 24px; font-size: 0.85rem; border-radius: 4px;">Get Free Quote</button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -256,7 +302,170 @@
     </section>
   </div>
   <div id="services" class="spa-page">
-    <section class="section" style="padding-top: 150px; padding-bottom: 50px;">
+    <!-- Professional Support Services -->
+    <section class="section" style="padding-top: 150px; background-color: var(--bg-color-alt);">
+      <div class="container fade-in-section">
+        <div class="text-center" style="margin-bottom: 50px;">
+          <h2 class="section-title typing-container" data-text="PROFESSIONAL SUPPORT SERVICES">PROFESSIONAL SUPPORT
+            SERVICES</h2>
+          <p class="section-subtitle">(For Designers, Carpenters & Architects)</p>
+        </div>
+
+        <div
+          style="margin-bottom: 50px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+          <p style="margin-bottom: 20px; font-size: 1.1rem; color: var(--textLight);">We provide professional interior
+            design support services for carpenters, freelance designers, architects, and contractors who require
+            technical drawings, 3D visualization, production details, or site execution guidance for their projects.</p>
+          <p style="color: #aaa;">Our team can support your project at any stage of development — from concept design to
+            execution.</p>
+        </div>
+
+        <h3 class="text-center" style="margin-bottom: 40px; font-size: 2rem;">Our Support Services</h3>
+        <div class="grid-2">
+          <!-- 1 2D Technical Drawings -->
+          <div class="simple-pop support-card">
+            <h4
+              style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              1️⃣ 2D Technical Drawings</h4>
+            <p style="margin-bottom: 20px; line-height: 1.6;">Professional working drawings
+              required for accurate furniture production and site execution.</p>
+            <p style="font-weight: bold; margin-bottom: 15px;">Includes:</p>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px; line-height: 1.8;">
+              <li>✔ Furniture layout plans</li>
+              <li>✔ Kitchen working drawings</li>
+              <li>✔ Wardrobe working drawings</li>
+              <li>✔ Section drawings</li>
+              <li>✔ Detailed measurements</li>
+            </ul>
+            <p style="font-size: 0.95rem; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1);">
+              <span style="font-weight: 500;">Software Used:</span>
+              <span>AutoCAD / Cabinet Vision</span>
+            </p>
+          </div>
+
+          <!-- 2 3D Design & Visualization -->
+          <div class="simple-pop support-card">
+            <h4
+              style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              2️⃣ 3D Design & Visualization</h4>
+            <p style="margin-bottom: 20px; line-height: 1.6;">High quality 3D interior design
+              visualization to present projects professionally to clients.</p>
+            <p style="font-weight: bold; margin-bottom: 15px;">Includes:</p>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px; line-height: 1.8;">
+              <li>✔ Photorealistic 3D views</li>
+              <li>✔ Material & color selection</li>
+              <li>✔ Lighting concepts</li>
+              <li>✔ Multiple angles</li>
+            </ul>
+            <p style="font-size: 0.95rem; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1);">
+              <span style="font-weight: 500;">Software Used:</span>
+              <span>SketchUp / Vray / Lumion</span>
+            </p>
+          </div>
+
+          <!-- 3 Cutlist & Production Details -->
+          <div class="simple-pop support-card">
+            <h4
+              style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              3️⃣ Cutlist & Production Details</h4>
+            <p style="margin-bottom: 20px; line-height: 1.6;">Accurate cutting list and
+              production details for carpenters and modular furniture manufacturers.</p>
+            <p style="font-weight: bold; margin-bottom: 15px;">Includes:</p>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px; line-height: 1.8;">
+              <li>✔ Panel cutting sizes</li>
+              <li>✔ Material breakdown</li>
+              <li>✔ Hardware placement</li>
+              <li>✔ Edge band details</li>
+            </ul>
+            <p style="font-size: 0.95rem; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1);">
+              <span style="font-weight: 500;">Software Used:</span>
+              <span>Cabinet Vision</span>
+            </p>
+          </div>
+
+          <!-- 4 Site Execution Support -->
+          <div class="simple-pop support-card">
+            <h4
+              style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              4️⃣ Site Execution Support</h4>
+            <p style="margin-bottom: 20px; line-height: 1.6;">Professional assistance for
+              interior execution and installation.</p>
+            <p style="font-weight: bold; margin-bottom: 15px;">Includes:</p>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px; line-height: 1.8;">
+              <li>✔ Execution guidance</li>
+              <li>✔ Design clarification</li>
+              <li>✔ Installation support</li>
+              <li>✔ Technical problem solving</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 60px; gap: 40px;">
+          <!-- Who Can Use This Service -->
+          <div class="simple-pop support-card">
+            <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--text-primary);">Who Can Use This Service?
+            </h3>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; color: #ccc; line-height: 2;">
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Freelance Interior Designers
+              </li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Carpenters</li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Architects</li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Contractors</li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Modular Furniture Manufacturers
+              </li>
+            </ul>
+          </div>
+
+          <!-- Why Work With Us -->
+          <div class="simple-pop support-card">
+            <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--text-primary);">Why Work With Us?</h3>
+            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0; color: #ccc; line-height: 2;">
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Professional Interior Design
+                Expertise</li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Accurate Technical Drawings
+              </li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Industry Standard Software</li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Fast Delivery</li>
+              <li><span style="color: var(--text-primary); margin-right: 10px;">✔</span> Affordable Pricing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project Workflow -->
+        <div class="simple-pop support-card text-center" style="margin-top: 60px;">
+          <h3 style="margin-bottom: 40px; font-size: 2rem; color: var(--text-primary);">Project Workflow</h3>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; color: #ccc;">
+            <div style="flex: 1; min-width: 200px; position: relative;">
+              <div style="font-size: 3rem; color: var(--text-primary); margin-bottom: 15px; opacity: 0.8;">1️⃣</div>
+              <p style="font-size: 1rem; color: #fff;">Send your project details</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; position: relative;">
+              <div style="font-size: 3rem; color: var(--text-primary); margin-bottom: 15px; opacity: 0.8;">2️⃣</div>
+              <p style="font-size: 1rem; color: #fff;">We review and discuss requirements</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; position: relative;">
+              <div style="font-size: 3rem; color: var(--text-primary); margin-bottom: 15px; opacity: 0.8;">3️⃣</div>
+              <p style="font-size: 1rem; color: #fff;">Work starts after confirmation</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; position: relative;">
+              <div style="font-size: 3rem; color: var(--text-primary); margin-bottom: 15px; opacity: 0.8;">4️⃣</div>
+              <p style="font-size: 1rem; color: #fff;">Drawings / Files delivered on time</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Consultation Button -->
+        <div style="text-align: center; margin-top: 60px;">
+          <button id="enquiryBtn" class="btn btn-primary" style="padding: 16px 40px; font-size: 1rem;"
+            onclick="document.getElementById('enquiryModal').style.setProperty('display', 'block', 'important');">Book
+            Online Consultation</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Our Expertise Images Grid Section -->
+    <section class="section" style="padding-top: 50px; padding-bottom: 50px;">
       <div class="container fade-in-section text-center">
         <h1 class="section-title">Our Expertise</h1>
         <p class="section-subtitle">We offer comprehensive interior architecture and design services, delivering
@@ -356,7 +565,7 @@
   <div id="works" class="spa-page">
     <section class="section" style="padding-top: 150px; padding-bottom: 50px;">
       <div class="container fade-in-section text-center">
-        <h1 class="section-title">Portfolio</h1>
+        <h1 class="section-title typing-container" data-text="Our Work">Our Work</h1>
         <p class="section-subtitle">A curated collection of our finest interior design projects, showcasing our
           commitment to elegant spaces.</p>
 
@@ -364,8 +573,66 @@
       </div>
     </section>
 
+    <!-- New Moving Images Section (Now First) -->
     <section class="section" style="padding-top: 0; overflow: hidden;">
       <div class="slider-container">
+        <div class="slider-track" style="animation-duration: 45s !important; animation-direction: reverse !important;">
+          <!-- Slide 1 -->
+          <div class="project-card slider-item">
+            <img src="1.jpeg" alt="Project Image 1">
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-card slider-item">
+            <img src="2.jpeg" alt="Project Image 2">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-card slider-item">
+            <img src="3.jpeg" alt="Project Image 3">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-card slider-item">
+            <img src="4.jpeg" alt="Project Image 4">
+          </div>
+          <!-- Slide 5 -->
+          <div class="project-card slider-item">
+            <img src="5 (2).jpeg" alt="Project Image 5">
+          </div>
+
+          <!-- Slide 7 -->
+          <div class="project-card slider-item">
+            <img src="7.jpeg" alt="Project Image 7">
+          </div>
+
+          <!-- Duplicates for seamless loop -->
+          <div class="project-card slider-item">
+            <img src="1.jpeg" alt="Project Image 1">
+          </div>
+          <div class="project-card slider-item">
+            <img src="2.jpeg" alt="Project Image 2">
+          </div>
+          <div class="project-card slider-item">
+            <img src="3.jpeg" alt="Project Image 3">
+          </div>
+          <div class="project-card slider-item">
+            <img src="4.jpeg" alt="Project Image 4">
+          </div>
+          <div class="project-card slider-item">
+            <img src="5 (2).jpeg" alt="Project Image 5">
+          </div>
+
+          <div class="project-card slider-item">
+            <img src="7.jpeg" alt="Project Image 7">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Original Portfolio Slider (Now Second) -->
+    <section class="section" style="padding-top: 40px; overflow: hidden;">
+      <div class="container fade-in-section text-center" style="padding-bottom: 30px;">
+        <h2 class="section-title" style="margin-bottom: 0;">Our Future Works</h2>
+      </div>
+      <div class="slider-container" style="padding-top: 0;">
         <div class="slider-track">
           <!-- Slide 1 -->
           <div class="project-card slider-item">
@@ -498,7 +765,15 @@
           </div>
 
           <div class="contact-form">
-            <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <form onsubmit="event.preventDefault(); 
+                            (function() {
+                              const name = document.getElementById('name').value; 
+                              const email = document.getElementById('email').value; 
+                              const phone = document.getElementById('phone').value; 
+                              const projectMessage = document.getElementById('message').value;
+                              const whatsappMessage = encodeURIComponent(`New Inquiry from Website\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nProject Details:\n${projectMessage}`);
+                              window.open(`https://wa.me/919995442552?text=${whatsappMessage}`, '_blank');
+                            })();">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" class="form-control" required>
@@ -565,7 +840,9 @@
   <footer>
     <div class="container">
       <div class="footer-content">
-        <a href="index.html" class="footer-logo">IDIA.</a>
+        <a href="#home" class="footer-logo">
+          <img src="logoe.jpeg" alt="i dia.">
+        </a>
         <p style="color: #666; max-width: 400px; margin: 0 auto;">Luxury interior design studio dedicated to
           crafting
           timeless, deeply personal spaces.</p>
@@ -580,14 +857,109 @@
     </div>
   </footer>
 
+  <!-- Enquiry Modal -->
+  <div id="enquiryModal" class="modal" style="display: none !important;">
+    <div class="modal-content large-modal" style="max-height: 90vh; overflow-y: auto;">
+      <span class="close-modal close-enquiry-modal"
+        onclick="document.getElementById('enquiryModal').style.setProperty('display', 'none', 'important');">&times;</span>
+      <h2 style="font-family: var(--font-hero); color: var(--text-primary); margin-bottom: 20px; font-size: 2rem;">
+        Service Enquiry</h2>
+      <form id="enquiryForm" onsubmit="handleEnquiryForm(event);">
+
+        <div class="grid-2" style="gap: 20px; align-items: start; margin-top: 0;">
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label for="enq-name">Name</label>
+            <input type="text" id="enq-name" class="form-control" required>
+          </div>
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label for="enq-phone">Phone Number</label>
+            <input type="tel" id="enq-phone" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap: 20px; align-items: start; margin-top: 0;">
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label for="enq-email">Email</label>
+            <input type="email" id="enq-email" class="form-control" required>
+          </div>
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label for="enq-profession">Profession</label>
+            <select id="enq-profession" class="form-control" required>
+              <option value="" disabled selected>Select your profession...</option>
+              <option value="Carpenter">Carpenter</option>
+              <option value="Interior Designer">Interior Designer</option>
+              <option value="Architect">Architect</option>
+              <option value="Contractor">Contractor</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+          <label>Service Required</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" id="enq-service-2d" value="2D Drawings"> 2D
+              Drawings</label>
+            <label class="checkbox-item"><input type="checkbox" id="enq-service-3d" value="3D Design"> 3D Design</label>
+            <label class="checkbox-item"><input type="checkbox" id="enq-service-cutlist" value="Cutlist">
+              Cutlist</label>
+            <label class="checkbox-item"><input type="checkbox" id="enq-service-site" value="Site Execution Support">
+              Site Execution Support</label>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap: 20px; align-items: start; margin-top: 0;">
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label for="enq-ptype">Project Type</label>
+            <select id="enq-ptype" class="form-control" required>
+              <option value="" disabled selected>Select project type...</option>
+              <option value="Kitchen">Kitchen</option>
+              <option value="Wardrobe">Wardrobe</option>
+              <option value="Bedroom">Bedroom</option>
+              <option value="Living Room">Living Room</option>
+              <option value="Full House Interior">Full House Interior</option>
+            </select>
+          </div>
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label for="enq-size">Project Size (Optional)</label>
+            <input type="text" id="enq-size" class="form-control" placeholder="e.g. 1500 sqft">
+          </div>
+        </div>
+
+        <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+          <label for="enq-message">Message / Requirement</label>
+          <textarea id="enq-message" class="form-control" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+          <label for="enq-file">Upload Drawing / Reference Image (Optional)</label>
+          <input type="file" id="enq-file" class="form-control" accept="image/*,.pdf,.dwg,.skp">
+          <small style="color: #666; font-size: 0.8rem; display: block; margin-top: 5px;">Note: You will be able to
+            directly share the file to our WhatsApp chat.</small>
+        </div>
+
+        <button type="submit" class="btn btn-outline" style="width: 100%; margin-top: 10px;">Submit Online
+          Consultation</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Quote Modal -->
   <div id="quoteModal" class="modal" style="display: none !important;">
     <div class="modal-content">
-      <span class="close-modal">&times;</span>
+      <span class="close-modal"
+        onclick="document.getElementById('quoteModal').style.setProperty('display', 'none', 'important');">&times;</span>
       <h2 style="font-family: var(--font-hero); color: var(--text-primary); margin-bottom: 20px; font-size: 2.5rem;">
         Talk to a Designer</h2>
-      <form id="quoteForm"
-        onsubmit="event.preventDefault(); alert('Consultation booked successfully!'); document.getElementById('quoteModal').style.display='none';">
+      <form id="quoteForm" onsubmit="event.preventDefault(); 
+                  (function() {
+                    const name = document.getElementById('modal-name').value; 
+                    const email = document.getElementById('modal-email').value; 
+                    const phone = document.getElementById('modal-phone').value; 
+                    const message = encodeURIComponent(`New Consultation Request\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nI would like to book an online consultation.`);
+                    window.open(`https://wa.me/919995442552?text=${message}`, '_blank');
+                    document.getElementById('quoteModal').style.display='none';
+                  })();">
         <div class="form-group" style="text-align: left;">
           <label for="modal-name">Name</label>
           <input type="text" id="modal-name" class="form-control" required>
@@ -606,7 +978,7 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 
 </html>
