@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://idiainteriors.com/sitemap.xml
+Sitemap: https://idiainteriors.in/sitemap.xml
